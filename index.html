@@ -18,36 +18,48 @@
     body {
         margin: 5px;
     }
-    p{
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+}
+    p {
         text-align: center;
         border-radius: 50px;
         color: black;
     }
-    
 </style>
 
 <body>
     <div class="p-3 mb-2 bg-danger text-white">
-        <br /><h1>Ambiente de desenvolvimento react-native no Debian Buster</h1><br /><br />
-    <p class="p-3 mb-2 bg-warning">
-        Não oficial
-    </p>
-</div>
+        <br />
+        <h1>Ambiente de desenvolvimento react-native no Debian Buster</h1><br /><br />
+        <p class="p-3 mb-2 bg-warning">
+            Não oficial
+        </p>
+    </div>
     <hr>
-        <div class="text">
+    <div class="text">
         # Preparação de ambiente para instalasão de react-native no Debian 10 Buster<br /><br />
         # primeiro rode o comando apt:<br />
         # recomendo (sudo aptitude install) para evitar dependências quebradas.<br />
         sudo apt update; sudo apt upgrade; sudo apt dist-upgrade(full-upgrade)<br /><br />
         <div class="p-3 mb-2 bg-warning">
-        Informaçoẽs adicionais sobre atualisações do debian buster:<br />
-        link https://www.debian.org/releases/testing/mips/release-notes/ch-upgrading.pt-br.html<br /><br />
+            Informaçoẽs adicionais sobre atualisações do debian buster:<br />
+            link https://www.debian.org/releases/testing/mips/release-notes/ch-upgrading.pt-br.html<br /><br />
         </div>
-    <hr>   
+        <hr>
 
-     <h1>-warning-</h1>
-            Tive alguns problemas com o vscode.<br />
-            Resolvi remover a pasta test e editar os aquivos em modo texto(usando pico ou o nano)<br />
+        <h1>-warning-</h1>
+        Tive alguns problemas com o vscode.<br />
+        Resolvi remover a pasta test e editar os aquivos em modo texto(usando pico ou o nano)<br />
         # instalar o java no Debian 10 Buster:<br />
 
         apt search openjdk<br />
@@ -65,17 +77,17 @@
         <a href="https://github.com/nodesource/distributions/blob/master/README.md">Nova versão</a><br>
         curl -sL https://deb.nodesource.com/setup_14.x | bash -<br />
         apt-get install -y nodejs<br />
-        
+
         node -v<br />
         npm -v<br /><br />
-        
-        sudo npm install react-native-cli<br/>
+
+        sudo npm install react-native-cli<br />
 
         #yarn:<br />
 
         sudo npm install yarn<br />
         yarn -v<br /><br />
-<hr>
+        <hr>
         #android studio:<br />
 
         anote o caminho da instalação do java<br />
@@ -87,14 +99,14 @@
 
         Se nenhum desses arquivos existir, crie o ~/.bashrc caso utilize o Shell padrão ou ~/.zshrc caso utilize o
         ZSH.<br /><br />
-<div class="macete p-3 mb-2 bg-primary text-white">
-        export JAVA_HOME=CAMINHO_ANOTADO_COM_SUA_VERSÃO<br />
-        export ANDROID_HOME=~/Android/Sdk<br />
-        export PATH=$PATH:$ANDROID_HOME/emulator<br />
-        export PATH=$PATH:$ANDROID_HOME/tools<br />
-        export PATH=$PATH:$ANDROID_HOME/tools/bin<br />
-        export PATH=$PATH:$ANDROID_HOME/platform-tools<br /><br />
-    </div>
+        <div class="macete p-3 mb-2 bg-primary text-white">
+            export JAVA_HOME=CAMINHO_ANOTADO_COM_SUA_VERSÃO<br />
+            export ANDROID_HOME=~/Android/Sdk<br />
+            export PATH=$PATH:$ANDROID_HOME/emulator<br />
+            export PATH=$PATH:$ANDROID_HOME/tools<br />
+            export PATH=$PATH:$ANDROID_HOME/tools/bin<br />
+            export PATH=$PATH:$ANDROID_HOME/platform-tools<br /><br />
+        </div>
         Acesse a página do Android Studio e clique no botão Download Android Studio.<br />
         Vá até a pasta de download e abra o arquivo tar.gz.<br />
         Esse arquivo deve possuir uma pasta android-studio dentro. Extraia essa pasta em um local de preferência (Ex.:
@@ -105,50 +117,51 @@
         Agora, abra o terminal (reinicie se já estiver aberto) e execute o seguinte comando:<br />
 
         studio.sh<br /><br />
-<hr>
+        <hr>
         instale também:<br /><br />
         sudo apt install qemu-kvm<br />
         sudo adduser $USER kvm<br />
         grep kvm /etc/group<br />
         kvm:x:NUMERO_QUALQUER:SEU_USUARIO<br /><br />
         <div class="p-3 mb-2 bg-warning">
-        #dependencias:<br />
-        Metro:<br />
-        https://facebook.github.io/metro/docs/getting-started<br />
-        Gradle:<br />
-        https://brunorozendo.com/post/instalando-gradle-no-gnu-linux.html<br />
-        #emulação usb:<br />
-        https://react-native.rocketseat.dev/usb/android/<br /><br />
+            #Dependencias:<br />
+            Metro:<br />
+            https://facebook.github.io/metro/docs/getting-started<br />
+            Gradle:<br />
+            https://brunorozendo.com/post/instalando-gradle-no-gnu-linux.html<br />
+            #Emulação usb:<br />
+            https://react-native.rocketseat.dev/usb/android/<br /><br />
         </div>
         Fonte de pesquisa:<br />
         https://react-native.rocketseat.dev/android/linux<br />
-            <h3>A quem estiver interessado em instalar o Debian-10 Buster</h3>
-            <a href="https://debian-handbook.info/browse/pt-BR/stable/index.html">Link e-book</a>
+        <h3>A quem estiver interessado em instalar o Debian-10 Buster</h3>
+        <li><a href="https://debian-handbook.info/browse/pt-BR/stable/index.html">Link e-book</a></li>
 
-           
 
-    </di>
+
+    </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
-<footer class="p-3 mb-2 bg-danger text-white">
-    <div class="row mb-3">
-    <p>Toodos os direitos reservados a Informática Inclusiva by 
-              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-            <a href="https://github.com/teaminformaticainclusiva"class="btn btn-primary">Informática Inclusiva</a>
-            <a href="https://associacaoculturalespacocarioca.000webhostapp.com/"class="btn btn-warning">Associação Cultural Espaço Carioca </a>
-            <a href="https://rocketseat.com.br/"class="btn btn-success">Rocketseat</a>
-          </div> 
+    <footer class="p-3 mb-2 bg-danger text-white">
+        <div class="row mb-3">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <a href="https://github.com/teaminformaticainclusiva" class="btn btn-primary">Informática Inclusiva</a>
+                <a href="https://associacaoculturalespacocarioca.000webhostapp.com/" class="btn btn-warning">Associação
+                    Cultural Espaço Carioca </a>
+                <a href="https://rocketseat.com.br/" class="btn btn-success">Rocketseat</a>
+                </div>
+                <p>Toodos os direitos reservados a Informática Inclusiva by</p>
         </div>
-    </p>
-</footer>
+        
+    </footer>
 </body>
 
 </html>
